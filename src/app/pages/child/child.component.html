@@ -1,0 +1,31 @@
+<form action="" class="alignContent" [formGroup]="contactForm">
+    <div class="col-lg-6">
+        <div class="row justify-content-center">
+            <div class="card p-3">
+                <label for="" class="mt-2">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+                <label for="">Gender</label>
+                <select name="" id="" class="mt-2" formControlName="gender">
+                    <option value="Male">
+                        Male
+                    </option>
+                    <option value="Female">
+                        Female
+                    </option>
+                </select>
+                <label for="" class="mt-2">DOB</label>
+                <input type="text" placeholder="DOB" class="mt-2" class="form-control" type="date"
+                    formControlName="dob">
+                <label for="" class="mt-2">Address</label>
+                <ng-container formGroupName="address">
+                    <input type="text" placeholder="H/no" class="mt-2" class="form-control" formControlName="hNO">
+                    <input type="text" placeholder="Street No" class="mt-2" class="form-control"
+                        formControlName="street">
+                    <input type="text" placeholder="District" class="mt-2" class="form-control"
+                        formControlName="district">
+                    <button class="btn btn-primary" (click)="submit()">Submit</button>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</form>
